@@ -14,13 +14,18 @@ public class DividirFactorial {
         double factorialNominador = 1;
         double factorialDenominador = 1;
 
-        for (int i = 1; i <= nominador; i++) {
-            factorialNominador *= i;
+        if (denominador == 0 || nominador == 0) {
+            return 0;
+        } else {
+            for (int i = 1; i <= nominador; i++) {
+                factorialNominador *= i;
+            }
+
+            for (int j = 1; j <= denominador; j++) {
+                factorialDenominador *= j;
+            }
         }
 
-        for (int j = 1; j <= denominador; j++) {
-            factorialDenominador *= j;
-        }
 
         double resultado = factorialNominador / factorialDenominador;
         return resultado;

@@ -20,4 +20,20 @@ class DividirFactorialTest {
         double resultadoEsperado = 60;
         assertEquals(resultadoEsperado, resultadoActual);
     }
+
+    @Test
+    void testDivisioPrueba3() {
+        DividirFactorial d = new DividirFactorial();
+        double resultadoActual = d.divisio(0, 7);
+        double resultadoEsperado = 0;
+        assertEquals(resultadoEsperado, resultadoActual);
+    }
+
+    @Test
+    void testDivisioPrueba4() {
+        DividirFactorial d = new DividirFactorial();
+        double resultadoActual = d.divisio(10, 10);
+        double resultadoEsperado = 1;
+        assertEquals(resultadoEsperado, resultadoActual);
+    }
 }
