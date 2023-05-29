@@ -21,4 +21,32 @@ class CablejatTest {
 
         assertEquals(esperado,actual);
     }
+
+    @Test
+    void testEsPotConectarDosHembras() {
+        ArrayList<String> cables = new ArrayList<>();
+        cables.add("FF");
+        cables.add("MF");
+
+        boolean actual = c.esPotConectar(cables);
+        boolean esperado = false;
+
+        assertEquals(esperado,actual);
+    }
+
+    @Test
+    void testEsPotConectarVariados() {
+        ArrayList<String> cables = new ArrayList<>();
+        cables.add("FF");
+        cables.add("MF");
+        cables.add("MM");
+        cables.add("MF");
+        cables.add("FM");
+        cables.add("FF");
+
+        boolean actual = c.esPotConectar(cables);
+        boolean esperado = false;
+
+        assertEquals(esperado,actual);
+    }
 }
